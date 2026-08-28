@@ -1,0 +1,6 @@
+# Ignore intermediate weights & runs
+*_outputs/
+runs/
+*.pt
+!models/*.pt
+.ipynb_checkpoints/
