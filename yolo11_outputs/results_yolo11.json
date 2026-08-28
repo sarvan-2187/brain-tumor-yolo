@@ -1,0 +1,22 @@
+{
+  "model_family": "yolo11",
+  "model_scale": "yolo11s.pt",
+  "config": {
+    "imgsz": 640,
+    "epochs": 50,
+    "seed": 42
+  },
+  "metrics": {
+    "map50": 0.966436735098746,
+    "map50_95": 0.7797247232469855,
+    "precision": 0.9617758966557561,
+    "recall": 0.9450834982016731,
+    "per_class_ap50": {
+      "Glioma": 0.9358831155326109,
+      "Meningioma": 0.9943661971830985,
+      "No Tumor": 0.9948,
+      "Pituitary": 0.9406976276792746
+    }
+  },
+  "notes": null
+}

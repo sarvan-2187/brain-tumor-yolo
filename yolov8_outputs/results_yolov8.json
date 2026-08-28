@@ -1,0 +1,22 @@
+{
+  "model_family": "yolov8",
+  "model_scale": "yolov8s.pt",
+  "config": {
+    "imgsz": 640,
+    "epochs": 50,
+    "seed": 42
+  },
+  "metrics": {
+    "map50": 0.9620981684644127,
+    "map50_95": 0.7797220822388844,
+    "precision": 0.9642654806289391,
+    "recall": 0.9286398017840083,
+    "per_class_ap50": {
+      "Glioma": 0.9373081547861534,
+      "Meningioma": 0.9941509200019839,
+      "No Tumor": 0.985,
+      "Pituitary": 0.9319335990695133
+    }
+  },
+  "notes": null
+}
