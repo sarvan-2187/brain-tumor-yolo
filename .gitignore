@@ -3,3 +3,9 @@
 *.pt
 !models/*.pt
 .ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
