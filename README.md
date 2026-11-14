@@ -42,11 +42,11 @@ to four decimal places; the linked CSV retains the full recorded precision.
 ### Training and model details
 
 All nine runs completed 100 epochs using `imgsz=640`, `batch=16`, and
-`seed=42`. They recorded the same [`_yolo_data/data.yaml`](./_yolo_data/data.yaml)
-dataset config and `val` evaluation split. The best epoch below is the saved
-run's recorded best-validation epoch. `optimizer=auto` is the recorded
-setting, not a guarantee of the same optimizer implementation across model
-families.
+`seed=42`. Their run arguments record the same local `_yolo_data/data.yaml`
+dataset config and `val` evaluation split; the raw dataset is not included in
+this repository. The best epoch below is the saved run's recorded
+best-validation epoch. `optimizer=auto` is the recorded setting, not a
+guarantee of the same optimizer implementation across model families.
 
 | Model | Epochs completed | Best epoch | Early stopped | Image size | Batch | Patience | Seed | Optimizer setting | Workers | AMP | Eval split | Params (M) | GFLOPs |
 |---|---:|---:|---|---:|---:|---:|---:|---|---:|---|---|---:|---:|
@@ -98,6 +98,11 @@ creates these files under [`paper_figures/`](./paper_figures/):
 The notebook needs the nine result JSONs, their run `args.yaml` files, and
 training `results.csv` logs listed in its model registry. It runs on CPU and
 does not retrain the models.
+
+The raw MRI dataset and per-image preview artifacts (for example
+`sample_predictions.png`, `train_batch*.jpg`, and `val_batch*.jpg`) are not
+published. The training notebooks can recreate previews locally when the
+dataset is available.
 
 ### Why an older training-curve plot may be blank
 

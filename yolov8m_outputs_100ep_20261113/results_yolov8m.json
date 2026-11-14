@@ -1,0 +1,49 @@
+{
+  "model_family": "yolov8m",
+  "model_scale": "yolov8m.pt",
+  "classes": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "config": {
+    "imgsz": 640,
+    "epochs": 100,
+    "batch": 16,
+    "patience": 101,
+    "seed": 42,
+    "optimizer": "auto",
+    "workers": 0,
+    "amp": true
+  },
+  "training": {
+    "epochs_completed": 100,
+    "best_epoch": 80,
+    "early_stopping": false
+  },
+  "model_info": {
+    "params_m": null,
+    "gflops": null
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.291,
+    "inference": 13.522,
+    "loss": 0.001,
+    "postprocess": 1.181
+  },
+  "metrics": {
+    "map50": 0.9635884017115868,
+    "map50_95": 0.7796785814639303,
+    "precision": 0.9609302340288599,
+    "recall": 0.9262327480516775,
+    "per_class_ap50": {
+      "Glioma": 0.9257992409796112,
+      "Meningioma": 0.9942957746478872,
+      "No Tumor": 0.9847979797979798,
+      "Pituitary": 0.9494606114208689
+    }
+  },
+  "eval_split": "val",
+  "notes": null
+}

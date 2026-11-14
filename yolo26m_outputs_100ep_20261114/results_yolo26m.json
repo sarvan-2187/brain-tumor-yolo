@@ -1,0 +1,49 @@
+{
+  "model_family": "yolo26m",
+  "model_scale": "yolo26m.pt",
+  "classes": [
+    "Glioma",
+    "Meningioma",
+    "No Tumor",
+    "Pituitary"
+  ],
+  "config": {
+    "imgsz": 640,
+    "epochs": 100,
+    "batch": 16,
+    "patience": 100,
+    "seed": 42,
+    "optimizer": "auto",
+    "workers": 0,
+    "amp": true
+  },
+  "training": {
+    "epochs_completed": 100,
+    "best_epoch": 84,
+    "early_stopping": false
+  },
+  "model_info": {
+    "params_m": null,
+    "gflops": null
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.304,
+    "inference": 13.398,
+    "loss": 0.001,
+    "postprocess": 1.221
+  },
+  "metrics": {
+    "map50": 0.9649575901644072,
+    "map50_95": 0.7793678188282417,
+    "precision": 0.954989705061133,
+    "recall": 0.9443832808930313,
+    "per_class_ap50": {
+      "Glioma": 0.9269518438611596,
+      "Meningioma": 0.9940209790209791,
+      "No Tumor": 0.995,
+      "Pituitary": 0.9438575377754898
+    }
+  },
+  "eval_split": "val",
+  "notes": "YOLO26 removes NMS/DFL and uses a different default training recipe (MuSGD, ProgLoss/STAL) than YOLOv8/YOLO11, so matching epochs/imgsz/seed alone does not make this a fully controlled comparison."
+}
